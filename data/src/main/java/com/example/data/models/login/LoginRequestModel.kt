@@ -1,15 +1,16 @@
 package com.example.data.models.login
 
 
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Serializable
+
 data class LoginRequestModel(
-    @SerialName("identifier")
+    @SerializedName("identifier")
     val identifier: String,
-    @SerialName("method")
+    @SerializedName("method")
     val method: String,
-    @SerialName("password")
+    @SerializedName("password")
     val password: String
 )

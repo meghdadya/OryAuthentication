@@ -1,17 +1,15 @@
 package com.example.data.models.register.response.flow
 
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class Device(
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("ip_address")
+    @SerializedName("ip_address")
     val ipAddress: String,
-    @SerialName("location")
+    @SerializedName("location")
     val location: String,
-    @SerialName("user_agent")
+    @SerializedName("user_agent")
     val userAgent: String
 )

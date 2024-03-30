@@ -2,35 +2,34 @@ package com.example.data.models.login.flow
 
 
 import com.example.data.models.register.response.flow.Traits
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class Identity(
-    @SerialName("created_at")
+    @SerializedName("created_at")
     val createdAt: String,
-    @SerialName("credentials")
+    @SerializedName("credentials")
     val credentials: Credentials,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("metadata_admin")
+    @SerializedName("metadata_admin")
     val metadataAdmin: MetadataAdmin,
-    @SerialName("organization_id")
+    @SerializedName("organization_id")
     val organizationId: String?=null,
-    @SerialName("recovery_addresses")
+    @SerializedName("recovery_addresses")
     val recoveryAddresses: List<RecoveryAddresse>,
-    @SerialName("schema_id")
+    @SerializedName("schema_id")
     val schemaId: String,
-    @SerialName("schema_url")
+    @SerializedName("schema_url")
     val schemaUrl: String,
-    @SerialName("state")
+    @SerializedName("state")
     val state: String,
-    @SerialName("state_changed_at")
+    @SerializedName("state_changed_at")
     val stateChangedAt: String,
-    @SerialName("traits")
+    @SerializedName("traits")
     val traits: Traits? = null,
-    @SerialName("updated_at")
+    @SerializedName("updated_at")
     val updatedAt: String,
-    @SerialName("verifiable_addresses")
+    @SerializedName("verifiable_addresses")
     val verifiableAddresses: List<VerifiableAddresse>
 )

@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.domain.models.GeneralError
 import com.example.domain.models.Resource
 import com.example.domain.models.login.LoginParamDataModel
-import com.example.domain.models.register.RegisterParamDataModel
 import com.example.domain.usecases.login.GetLoginUseCase
 import com.example.domain.usecases.login.LoginUseCase
 import com.example.ui_component.base.BaseViewModel

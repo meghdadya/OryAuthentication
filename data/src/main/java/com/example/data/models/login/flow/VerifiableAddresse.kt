@@ -1,25 +1,23 @@
 package com.example.data.models.login.flow
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
 data class VerifiableAddresse(
-    @SerialName("created_at")
+    @SerializedName("created_at")
     val createdAt: String,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("status")
+    @SerializedName("status")
     val status: String,
-    @SerialName("updated_at")
+    @SerializedName("updated_at")
     val updatedAt: String,
-    @SerialName("value")
+    @SerializedName("value")
     val value: String,
-    @SerialName("verified")
+    @SerializedName("verified")
     val verified: Boolean,
-    @SerialName("verified_at")
+    @SerializedName("verified_at")
     val verifiedAt: String,
-    @SerialName("via")
+    @SerializedName("via")
     val via: String
 )

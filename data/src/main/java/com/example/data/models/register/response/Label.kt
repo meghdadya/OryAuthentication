@@ -1,17 +1,15 @@
 package com.example.data.models.register.response
 
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class Label(
-    @SerialName("context")
+    @SerializedName("context")
     val context: Context?=null,
-    @SerialName("id")
+    @SerializedName("id")
     val id: Int,
-    @SerialName("text")
+    @SerializedName("text")
     val text: String,
-    @SerialName("type")
+    @SerializedName("type")
     val type: String
 )

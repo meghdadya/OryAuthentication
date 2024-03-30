@@ -7,6 +7,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import com.example.data.data_source.remote.network.adapter.NetworkCallAdapterFactory
 import com.example.data.models.base.BASE_URL
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Reusable
 import kotlinx.serialization.json.Json
@@ -15,6 +17,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.CallAdapter
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 @Module
@@ -27,6 +30,12 @@ object NetworkModule {
             ignoreUnknownKeys = true
         }
     }
+
+    @Provides
+    fun provideGson(): Gson = GsonBuilder()
+        .setPrettyPrinting()
+        .serializeNulls()
+        .create()
 
     @Provides
     @Reusable
@@ -49,13 +58,15 @@ object NetworkModule {
     @Provides
     fun providesRetrofit(
         client: OkHttpClient,
-        json: Json,
+        gson: Gson,
+//        json: Json,
         networkCallAdapterFactory: CallAdapter.Factory,
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(client)
-            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+            .addConverterFactory(GsonConverterFactory.create(gson))
+//            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
             .addCallAdapterFactory(networkCallAdapterFactory)
             .build()
     }

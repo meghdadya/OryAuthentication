@@ -1,11 +1,11 @@
 package com.example.data.models.register.response
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
+
 data class Context(
-    @SerialName("title")
+    @SerializedName("title")
     val title: String
 )

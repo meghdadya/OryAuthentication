@@ -1,13 +1,12 @@
 package com.example.data.models.login.flow
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class Credentials(
-    @SerialName("property1")
+    @SerializedName("property1")
     val property1: Property1,
-    @SerialName("property2")
+    @SerializedName("property2")
     val property2: Property1
 )

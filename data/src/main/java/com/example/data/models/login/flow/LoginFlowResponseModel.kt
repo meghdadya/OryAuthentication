@@ -2,13 +2,10 @@ package com.example.data.models.login.flow
 
 
 import com.example.data.models.base.RemoteResponse
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class LoginFlowResponseModel(
-    @SerialName("session")
-    val session: Session,
-    @SerialName("session_token")
+    @SerializedName("session_token")
     val sessionToken: String
 ) : RemoteResponse

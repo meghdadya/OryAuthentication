@@ -1,15 +1,14 @@
 package com.example.data.models.register.response.flow
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class AuthenticationMethod(
-    @SerialName("aal")
+    @SerializedName("aal")
     val aal: String,
-    @SerialName("completed_at")
+    @SerializedName("completed_at")
     val completedAt: String,
-    @SerialName("method")
+    @SerializedName("method")
     val method: String
 )

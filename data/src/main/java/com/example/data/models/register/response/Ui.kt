@@ -1,15 +1,13 @@
 package com.example.data.models.register.response
 
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class Ui(
-    @SerialName("action")
+    @SerializedName("action")
     val action: String,
-    @SerialName("method")
+    @SerializedName("method")
     val method: String,
-    @SerialName("nodes")
+    @SerializedName("nodes")
     val nodes: List<Node>
 )

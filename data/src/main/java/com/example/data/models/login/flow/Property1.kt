@@ -1,21 +1,19 @@
 package com.example.data.models.login.flow
 
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class Property1(
-    @SerialName("config")
+    @SerializedName("config")
     val config: Config,
-    @SerialName("created_at")
+    @SerializedName("created_at")
     val createdAt: String,
-    @SerialName("identifiers")
+    @SerializedName("identifiers")
     val identifiers: List<String>,
-    @SerialName("type")
+    @SerializedName("type")
     val type: String,
-    @SerialName("updated_at")
+    @SerializedName("updated_at")
     val updatedAt: String,
-    @SerialName("version")
+    @SerializedName("version")
     val version: Int
 )

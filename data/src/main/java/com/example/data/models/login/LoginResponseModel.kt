@@ -2,33 +2,32 @@ package com.example.data.models.login
 
 
 import com.example.data.models.register.response.Ui
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class LoginResponseModel(
-    @SerialName("created_at")
+    @SerializedName("created_at")
     val createdAt: String,
-    @SerialName("expires_at")
+    @SerializedName("expires_at")
     val expiresAt: String,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("issued_at")
+    @SerializedName("issued_at")
     val issuedAt: String,
-    @SerialName("organization_id")
+    @SerializedName("organization_id")
     val organizationId: String?=null,
-    @SerialName("refresh")
+    @SerializedName("refresh")
     val refresh: Boolean,
-    @SerialName("request_url")
+    @SerializedName("request_url")
     val requestUrl: String,
-    @SerialName("requested_aal")
+    @SerializedName("requested_aal")
     val requestedAal: String,
-    @SerialName("state")
+    @SerializedName("state")
     val state: String,
-    @SerialName("type")
+    @SerializedName("type")
     val type: String,
-    @SerialName("ui")
+    @SerializedName("ui")
     val ui: Ui,
-    @SerialName("updated_at")
+    @SerializedName("updated_at")
     val updatedAt: String
 )

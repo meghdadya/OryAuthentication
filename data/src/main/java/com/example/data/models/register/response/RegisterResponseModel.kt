@@ -2,25 +2,24 @@ package com.example.data.models.register.response
 
 
 import com.example.data.models.base.RemoteResponse
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class RegisterResponseModel(
-    @SerialName("expires_at")
+    @SerializedName("expires_at")
     val expiresAt: String,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("issued_at")
+    @SerializedName("issued_at")
     val issuedAt: String,
-    @SerialName("organization_id")
+    @SerializedName("organization_id")
     val organizationId: String?,
-    @SerialName("request_url")
+    @SerializedName("request_url")
     val requestUrl: String,
-    @SerialName("state")
+    @SerializedName("state")
     val state: String,
-    @SerialName("type")
+    @SerializedName("type")
     val type: String,
-    @SerialName("ui")
+    @SerializedName("ui")
     val ui: Ui
 ) : RemoteResponse

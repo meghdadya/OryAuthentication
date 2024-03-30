@@ -1,19 +1,19 @@
 package com.example.data.models.login.flow
 
 
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Serializable
 data class RecoveryAddresse(
-    @SerialName("created_at")
+    @SerializedName("created_at")
     val createdAt: String,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("updated_at")
+    @SerializedName("updated_at")
     val updatedAt: String,
-    @SerialName("value")
+    @SerializedName("value")
     val value: String,
-    @SerialName("via")
+    @SerializedName("via")
     val via: String
 )

@@ -1,11 +1,11 @@
 package com.example.data.models.register.response.flow
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
+
 data class Traits(
-    @SerialName("email")
+    @SerializedName("email")
     val email: String
 )

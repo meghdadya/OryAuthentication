@@ -10,7 +10,7 @@ class RegisterContract {
         data object GetRegisterForm : RegisterViewEvent()
 
         data class Register(
-            val email: String, val password: String, val fullName: String
+            val items:List<RegisterUiModel>
         ) : RegisterViewEvent()
 
     }
@@ -18,7 +18,7 @@ class RegisterContract {
     sealed class RegisterViewState : BaseContract.UiState {
         data object Loading : RegisterViewState()
         data object Failed : RegisterViewState()
-        data class Success(val list: List<RegisterDomainModel>):RegisterViewState()
+        data class Success(val list: List<RegisterUiModel>):RegisterViewState()
     }
 
     sealed class RegisterViewEffect() : BaseContract.UiEffect {

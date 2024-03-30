@@ -10,11 +10,13 @@ class RegisterMapper @Inject constructor() : RemoteDataMapper<Node, RegisterDoma
     override fun map(response: Node): RegisterDomainModel {
         return with(response) {
             RegisterDomainModel(
+                name = response.attributes.name,
                 disabled = response.attributes.disabled,
                 label = response.meta?.label?.text ?: "",
                 required = response.attributes.required ?: false,
-                type = RegisterFiledType.entries.single { response.attributes.type == it.typeName }
+                type = RegisterFiledType.entries.singleOrNull { response.attributes.type == it.typeName }
             )
         }
     }
+
 }

@@ -1,27 +1,25 @@
 package com.example.data.models.register.response.flow
 
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class Session(
-    @SerialName("active")
+    @SerializedName("active")
     val active: Boolean,
-    @SerialName("authenticated_at")
+    @SerializedName("authenticated_at")
     val authenticatedAt: String,
-    @SerialName("authentication_methods")
+    @SerializedName("authentication_methods")
     val authenticationMethods: List<AuthenticationMethod>,
-    @SerialName("authenticator_assurance_level")
+    @SerializedName("authenticator_assurance_level")
     val authenticatorAssuranceLevel: String,
-    @SerialName("devices")
+    @SerializedName("devices")
     val devices: List<Device>,
-    @SerialName("expires_at")
+    @SerializedName("expires_at")
     val expiresAt: String,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("identity")
+    @SerializedName("identity")
     val identity: Identity,
-    @SerialName("issued_at")
+    @SerializedName("issued_at")
     val issuedAt: String
 )

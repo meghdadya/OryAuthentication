@@ -2,17 +2,17 @@ package com.example.data.models.register.response.flow
 
 
 import com.example.data.models.base.RemoteResponse
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
+
 data class RegisterFlowResponseModel(
-    @SerialName("continue_with")
+    @SerializedName("continue_with")
     val continueWith: List<ContinueWith>,
-    @SerialName("identity")
+    @SerializedName("identity")
     val identity: Identity,
-    @SerialName("session")
+    @SerializedName("session")
     val session: Session,
-    @SerialName("session_token")
+    @SerializedName("session_token")
     val sessionToken: String
 ) : RemoteResponse

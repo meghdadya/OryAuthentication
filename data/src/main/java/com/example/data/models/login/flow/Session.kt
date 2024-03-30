@@ -1,19 +1,19 @@
 package com.example.data.models.login.flow
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
+
 data class Session(
-    @SerialName("active")
+    @SerializedName("active")
     val active: Boolean,
-    @SerialName("authenticated_at")
+    @SerializedName("authenticated_at")
     val authenticatedAt: String,
-    @SerialName("expires_at")
+    @SerializedName("expires_at")
     val expiresAt: String,
-    @SerialName("id")
+    @SerializedName("id")
     val id: String,
-    @SerialName("issued_at")
+    @SerializedName("issued_at")
     val issuedAt: String
 )

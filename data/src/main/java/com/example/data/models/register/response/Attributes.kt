@@ -1,23 +1,23 @@
 package com.example.data.models.register.response
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
+
 data class Attributes(
-    @SerialName("autocomplete")
+    @SerializedName("autocomplete")
     val autocomplete: String? = null,
-    @SerialName("disabled")
+    @SerializedName("disabled")
     val disabled: Boolean,
-    @SerialName("name")
+    @SerializedName("name")
     val name: String,
-    @SerialName("node_type")
+    @SerializedName("node_type")
     val nodeType: String,
-    @SerialName("required")
+    @SerializedName("required")
     val required: Boolean? = null,
-    @SerialName("type")
+    @SerializedName("type")
     val type: String,
-    @SerialName("value")
+    @SerializedName("value")
     val value: String? = null
 )

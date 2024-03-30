@@ -1,19 +1,17 @@
 package com.example.data.models.register.request
 
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class RegisterRequestModel(
-    @SerialName("csrf_token")
+    @SerializedName("csrf_token")
     val csrfToken: String,
-    @SerialName("method")
+    @SerializedName("method")
     val method: String,
-    @SerialName("password")
+    @SerializedName("password")
     val password: String,
-    @SerialName("traits")
-    val traits: Traits,
-    @SerialName("transient_payload")
+    @SerializedName("traits")
+    val traits: Map<String, Any>,
+    @SerializedName("transient_payload")
     val transientPayload: TransientPayload?
 )

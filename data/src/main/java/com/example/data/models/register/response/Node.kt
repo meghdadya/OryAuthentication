@@ -1,20 +1,18 @@
 package com.example.data.models.register.response
 
-
 import com.example.data.models.base.RemoteResponse
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 data class Node(
-    @SerialName("attributes")
+    @SerializedName("attributes")
     val attributes: Attributes,
-    @SerialName("group")
+    @SerializedName("group")
     val group: String,
-    @SerialName("messages")
+    @SerializedName("messages")
     val messages: List<String?>,
-    @SerialName("meta")
+    @SerializedName("meta")
     val meta: Meta? = null,
-    @SerialName("type")
+    @SerializedName("type")
     val type: String
 ) : RemoteResponse

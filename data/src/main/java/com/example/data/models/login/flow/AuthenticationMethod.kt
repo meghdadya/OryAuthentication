@@ -1,19 +1,20 @@
 package com.example.data.models.login.flow
 
 
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Serializable
+
 data class AuthenticationMethod(
-    @SerialName("aal")
+    @SerializedName("aal")
     val aal: String,
-    @SerialName("completed_at")
+    @SerializedName("completed_at")
     val completedAt: String,
-    @SerialName("method")
+    @SerializedName("method")
     val method: String,
-    @SerialName("organization")
+    @SerializedName("organization")
     val organization: String? = null,
-    @SerialName("provider")
+    @SerializedName("provider")
     val provider: String? = null
 )
